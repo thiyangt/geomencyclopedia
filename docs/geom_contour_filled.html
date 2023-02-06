@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 96 geom_contour_filled | Data Visualization: geom Encyclopedia</title>
+  <meta name="description" content="Chapter 96 geom_contour_filled | Data Visualization: geom Encyclopedia" />
+  <meta name="generator" content="bookdown 0.29 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 96 geom_contour_filled | Data Visualization: geom Encyclopedia" />
+  <meta property="og:type" content="book" />
+  
+  
+  
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 96 geom_contour_filled | Data Visualization: geom Encyclopedia" />
+  
+  
+  
+
+<meta name="author" content="Thiyanga S. Talagala" />
+
+
+<meta name="date" content="2023-02-06" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="geom_lm_intercept_label.html"/>
+<link rel="next" href="geom_textline.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">SHORT TITLE HERE</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> Introduction</a></li>
+<li class="chapter" data-level="2" data-path="geoms.html"><a href="geoms.html"><i class="fa fa-check"></i><b>2</b> <code>geom</code>s</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="geoms.html"><a href="geoms.html#geom_signif"><i class="fa fa-check"></i><b>2.1</b> geom_signif</a>
+<ul>
+<li class="chapter" data-level="2.1.1" data-path="geoms.html"><a href="geoms.html#illustration"><i class="fa fa-check"></i><b>2.1.1</b> Illustration</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="geom-crossbar.html"><a href="geom-crossbar.html"><i class="fa fa-check"></i><b>3</b> geom-crossbar</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="geom-crossbar.html"><a href="geom-crossbar.html#illustration-1"><i class="fa fa-check"></i><b>3.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="geom_blank.html"><a href="geom_blank.html"><i class="fa fa-check"></i><b>4</b> geom_blank</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="geom_blank.html"><a href="geom_blank.html#illustration-2"><i class="fa fa-check"></i><b>4.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="geom_sf-geom_sf_text.html"><a href="geom_sf-geom_sf_text.html"><i class="fa fa-check"></i><b>5</b> geom_sf, geom_sf_text</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="geom_sf-geom_sf_text.html"><a href="geom_sf-geom_sf_text.html#illustration-3"><i class="fa fa-check"></i><b>5.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="geom_tile.html"><a href="geom_tile.html"><i class="fa fa-check"></i><b>6</b> geom_tile</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="geom_tile.html"><a href="geom_tile.html#illustration-4"><i class="fa fa-check"></i><b>6.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="geom_rug.html"><a href="geom_rug.html"><i class="fa fa-check"></i><b>7</b> geom_rug</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="geom_rug.html"><a href="geom_rug.html#illustration-5"><i class="fa fa-check"></i><b>7.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="geom_text_repel.html"><a href="geom_text_repel.html"><i class="fa fa-check"></i><b>8</b> geom_text_repel</a>
+<ul>
+<li class="chapter" data-level="8.1" data-path="geom_text_repel.html"><a href="geom_text_repel.html#illustration-6"><i class="fa fa-check"></i><b>8.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="9" data-path="geom_hdr_boxplot.html"><a href="geom_hdr_boxplot.html"><i class="fa fa-check"></i><b>9</b> geom_hdr_boxplot</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="geom_hdr_boxplot.html"><a href="geom_hdr_boxplot.html#illustration-7"><i class="fa fa-check"></i><b>9.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="geom_ribbon.html"><a href="geom_ribbon.html"><i class="fa fa-check"></i><b>10</b> geom_ribbon</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="geom_ribbon.html"><a href="geom_ribbon.html#illustration-8"><i class="fa fa-check"></i><b>10.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="11" data-path="geom_image.html"><a href="geom_image.html"><i class="fa fa-check"></i><b>11</b> geom_image</a>
+<ul>
+<li class="chapter" data-level="11.1" data-path="geom_image.html"><a href="geom_image.html#illustration-9"><i class="fa fa-check"></i><b>11.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="12" data-path="geom_lm_formula.html"><a href="geom_lm_formula.html"><i class="fa fa-check"></i><b>12</b> geom_lm_formula</a>
+<ul>
+<li class="chapter" data-level="12.1" data-path="geom_lm_formula.html"><a href="geom_lm_formula.html#illustration-10"><i class="fa fa-check"></i><b>12.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="13" data-path="geom_density_ridges_gradient.html"><a href="geom_density_ridges_gradient.html"><i class="fa fa-check"></i><b>13</b> geom_density_ridges_gradient</a></li>
+<li class="chapter" data-level="14" data-path="geom_density2d.html"><a href="geom_density2d.html"><i class="fa fa-check"></i><b>14</b> geom_density2d</a>
+<ul>
+<li class="chapter" data-level="14.1" data-path="geom_density2d.html"><a href="geom_density2d.html#illustration-11"><i class="fa fa-check"></i><b>14.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="15" data-path="geom_spoke.html"><a href="geom_spoke.html"><i class="fa fa-check"></i><b>15</b> geom_spoke</a>
+<ul>
+<li class="chapter" data-level="15.1" data-path="geom_spoke.html"><a href="geom_spoke.html#illustration-12"><i class="fa fa-check"></i><b>15.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="16" data-path="geom_lm_fitted.html"><a href="geom_lm_fitted.html"><i class="fa fa-check"></i><b>16</b> geom_lm_fitted</a>
+<ul>
+<li class="chapter" data-level="16.1" data-path="geom_lm_fitted.html"><a href="geom_lm_fitted.html#illustration-13"><i class="fa fa-check"></i><b>16.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="17" data-path="geom_beeswarm.html"><a href="geom_beeswarm.html"><i class="fa fa-check"></i><b>17</b> geom_beeswarm</a>
+<ul>
+<li class="chapter" data-level="17.1" data-path="geom_beeswarm.html"><a href="geom_beeswarm.html#illustration-14"><i class="fa fa-check"></i><b>17.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="18" data-path="geom_step.html"><a href="geom_step.html"><i class="fa fa-check"></i><b>18</b> geom_step</a>
+<ul>
+<li class="chapter" data-level="18.1" data-path="geom_step.html"><a href="geom_step.html#illustration-15"><i class="fa fa-check"></i><b>18.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="19" data-path="geom_xy_xymean.html"><a href="geom_xy_xymean.html"><i class="fa fa-check"></i><b>19</b> geom_xy_xymean</a>
+<ul>
+<li class="chapter" data-level="19.1" data-path="geom_xy_xymean.html"><a href="geom_xy_xymean.html#illustration-16"><i class="fa fa-check"></i><b>19.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="20" data-path="geom_lm_conf_int_segments.html"><a href="geom_lm_conf_int_segments.html"><i class="fa fa-check"></i><b>20</b> geom_lm_conf_int_segments</a>
+<ul>
+<li class="chapter" data-level="20.1" data-path="geom_lm_conf_int_segments.html"><a href="geom_lm_conf_int_segments.html#illustration-17"><i class="fa fa-check"></i><b>20.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="21" data-path="geom_ridgeline_gradient.html"><a href="geom_ridgeline_gradient.html"><i class="fa fa-check"></i><b>21</b> geom_ridgeline_gradient</a>
+<ul>
+<li class="chapter" data-level="21.1" data-path="geom_ridgeline_gradient.html"><a href="geom_ridgeline_gradient.html#illustration-18"><i class="fa fa-check"></i><b>21.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="22" data-path="geom_emoji.html"><a href="geom_emoji.html"><i class="fa fa-check"></i><b>22</b> geom_emoji</a>
+<ul>
+<li class="chapter" data-level="22.1" data-path="geom_emoji.html"><a href="geom_emoji.html#illustration-19"><i class="fa fa-check"></i><b>22.1</b> Illustration</a></li>
+<li class="chapter" data-level="22.2" data-path="geom_emoji.html"><a href="geom_emoji.html#geom_tufteboxplot"><i class="fa fa-check"></i><b>22.2</b> geom_tufteboxplot</a></li>
+<li class="chapter" data-level="22.3" data-path="geom_emoji.html"><a href="geom_emoji.html#illustration-20"><i class="fa fa-check"></i><b>22.3</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="23" data-path="geom_mosaic.html"><a href="geom_mosaic.html"><i class="fa fa-check"></i><b>23</b> geom_mosaic</a>
+<ul>
+<li class="chapter" data-level="23.1" data-path="geom_mosaic.html"><a href="geom_mosaic.html#illustration-21"><i class="fa fa-check"></i><b>23.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="24" data-path="geom_pointrange.html"><a href="geom_pointrange.html"><i class="fa fa-check"></i><b>24</b> geom_pointrange</a>
+<ul>
+<li class="chapter" data-level="24.1" data-path="geom_pointrange.html"><a href="geom_pointrange.html#illustration-22"><i class="fa fa-check"></i><b>24.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="25" data-path="geom_lm_pred_int.html"><a href="geom_lm_pred_int.html"><i class="fa fa-check"></i><b>25</b> geom_lm_pred_int</a>
+<ul>
+<li class="chapter" data-level="25.1" data-path="geom_lm_pred_int.html"><a href="geom_lm_pred_int.html#illustration-23"><i class="fa fa-check"></i><b>25.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="26" data-path="geom_smooth.html"><a href="geom_smooth.html"><i class="fa fa-check"></i><b>26</b> geom_smooth</a>
+<ul>
+<li class="chapter" data-level="26.1" data-path="geom_smooth.html"><a href="geom_smooth.html#illustration-24"><i class="fa fa-check"></i><b>26.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="27" data-path="geom_bin_2d.html"><a href="geom_bin_2d.html"><i class="fa fa-check"></i><b>27</b> geom_bin_2d</a>
+<ul>
+<li class="chapter" data-level="27.1" data-path="geom_bin_2d.html"><a href="geom_bin_2d.html#illustration-25"><i class="fa fa-check"></i><b>27.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="28" data-path="geom_dotplot.html"><a href="geom_dotplot.html"><i class="fa fa-check"></i><b>28</b> geom_dotplot</a>
+<ul>
+<li class="chapter" data-level="28.1" data-path="geom_dotplot.html"><a href="geom_dotplot.html#illustration-26"><i class="fa fa-check"></i><b>28.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="29" data-path="geom_linerange.html"><a href="geom_linerange.html"><i class="fa fa-check"></i><b>29</b> geom_linerange</a>
+<ul>
+<li class="chapter" data-level="29.1" data-path="geom_linerange.html"><a href="geom_linerange.html#illustration-27"><i class="fa fa-check"></i><b>29.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="30" data-path="geom_curve.html"><a href="geom_curve.html"><i class="fa fa-check"></i><b>30</b> geom_curve</a>
+<ul>
+<li class="chapter" data-level="30.1" data-path="geom_curve.html"><a href="geom_curve.html#illustration-28"><i class="fa fa-check"></i><b>30.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="31" data-path="geom_mark_ellipse.html"><a href="geom_mark_ellipse.html"><i class="fa fa-check"></i><b>31</b> geom_mark_ellipse</a>
+<ul>
+<li class="chapter" data-level="31.1" data-path="geom_mark_ellipse.html"><a href="geom_mark_ellipse.html#illustration-29"><i class="fa fa-check"></i><b>31.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="32" data-path="geom_density_2d_filled.html"><a href="geom_density_2d_filled.html"><i class="fa fa-check"></i><b>32</b> geom_density_2d_filled</a>
+<ul>
+<li class="chapter" data-level="32.1" data-path="geom_density_2d_filled.html"><a href="geom_density_2d_filled.html#illustration-30"><i class="fa fa-check"></i><b>32.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="33" data-path="geom_violin.html"><a href="geom_violin.html"><i class="fa fa-check"></i><b>33</b> geom_violin</a>
+<ul>
+<li class="chapter" data-level="33.1" data-path="geom_violin.html"><a href="geom_violin.html#illustration-31"><i class="fa fa-check"></i><b>33.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="34" data-path="geom_segment.html"><a href="geom_segment.html"><i class="fa fa-check"></i><b>34</b> geom_segment</a>
+<ul>
+<li class="chapter" data-level="34.1" data-path="geom_segment.html"><a href="geom_segment.html#illustration-32"><i class="fa fa-check"></i><b>34.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="35" data-path="geom_label.html"><a href="geom_label.html"><i class="fa fa-check"></i><b>35</b> geom_label</a>
+<ul>
+<li class="chapter" data-level="35.1" data-path="geom_label.html"><a href="geom_label.html#illustration-33"><i class="fa fa-check"></i><b>35.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="36" data-path="geom_rect.html"><a href="geom_rect.html"><i class="fa fa-check"></i><b>36</b> geom_rect</a>
+<ul>
+<li class="chapter" data-level="36.1" data-path="geom_rect.html"><a href="geom_rect.html#illustration-34"><i class="fa fa-check"></i><b>36.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="37" data-path="geom_freqpoly.html"><a href="geom_freqpoly.html"><i class="fa fa-check"></i><b>37</b> geom_freqpolY</a>
+<ul>
+<li class="chapter" data-level="37.1" data-path="geom_freqpoly.html"><a href="geom_freqpoly.html#illustration-35"><i class="fa fa-check"></i><b>37.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="38" data-path="geom_vline.html"><a href="geom_vline.html"><i class="fa fa-check"></i><b>38</b> geom_vline</a>
+<ul>
+<li class="chapter" data-level="38.1" data-path="geom_vline.html"><a href="geom_vline.html#illustration-36"><i class="fa fa-check"></i><b>38.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="39" data-path="geom_bkde2d.html"><a href="geom_bkde2d.html"><i class="fa fa-check"></i><b>39</b> geom_bkde2d</a>
+<ul>
+<li class="chapter" data-level="39.1" data-path="geom_bkde2d.html"><a href="geom_bkde2d.html#illustration-37"><i class="fa fa-check"></i><b>39.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="40" data-path="geom_spiro.html"><a href="geom_spiro.html"><i class="fa fa-check"></i><b>40</b> geom_spiro</a>
+<ul>
+<li class="chapter" data-level="40.1" data-path="geom_spiro.html"><a href="geom_spiro.html#illustration-38"><i class="fa fa-check"></i><b>40.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="41" data-path="geom_text.html"><a href="geom_text.html"><i class="fa fa-check"></i><b>41</b> geom_text</a>
+<ul>
+<li class="chapter" data-level="41.1" data-path="geom_text.html"><a href="geom_text.html#illustration-39"><i class="fa fa-check"></i><b>41.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="42" data-path="geom_count.html"><a href="geom_count.html"><i class="fa fa-check"></i><b>42</b> geom_count</a>
+<ul>
+<li class="chapter" data-level="42.1" data-path="geom_count.html"><a href="geom_count.html#illustration-40"><i class="fa fa-check"></i><b>42.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="43" data-path="geom_point_interactive.html"><a href="geom_point_interactive.html"><i class="fa fa-check"></i><b>43</b> geom_point_interactive</a>
+<ul>
+<li class="chapter" data-level="43.1" data-path="geom_point_interactive.html"><a href="geom_point_interactive.html#illustration-41"><i class="fa fa-check"></i><b>43.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="44" data-path="geom_x_mean.html"><a href="geom_x_mean.html"><i class="fa fa-check"></i><b>44</b> geom_x_mean</a>
+<ul>
+<li class="chapter" data-level="44.1" data-path="geom_x_mean.html"><a href="geom_x_mean.html#illustration-42"><i class="fa fa-check"></i><b>44.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="45" data-path="geom_errorbar.html"><a href="geom_errorbar.html"><i class="fa fa-check"></i><b>45</b> geom_errorbar</a>
+<ul>
+<li class="chapter" data-level="45.1" data-path="geom_errorbar.html"><a href="geom_errorbar.html#illustration-43"><i class="fa fa-check"></i><b>45.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="46" data-path="geom_raster.html"><a href="geom_raster.html"><i class="fa fa-check"></i><b>46</b> geom_raster</a>
+<ul>
+<li class="chapter" data-level="46.1" data-path="geom_raster.html"><a href="geom_raster.html#illustration-44"><i class="fa fa-check"></i><b>46.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="47" data-path="geom_hex.html"><a href="geom_hex.html"><i class="fa fa-check"></i><b>47</b> geom_hex</a>
+<ul>
+<li class="chapter" data-level="47.1" data-path="geom_hex.html"><a href="geom_hex.html#illustration-45"><i class="fa fa-check"></i><b>47.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="48" data-path="geom_dotplot-1.html"><a href="geom_dotplot-1.html"><i class="fa fa-check"></i><b>48</b> geom_dotplot</a>
+<ul>
+<li class="chapter" data-level="48.1" data-path="geom_dotplot-1.html"><a href="geom_dotplot-1.html#illustration-46"><i class="fa fa-check"></i><b>48.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="49" data-path="geom_dumbbell.html"><a href="geom_dumbbell.html"><i class="fa fa-check"></i><b>49</b> geom_dumbbell</a>
+<ul>
+<li class="chapter" data-level="49.1" data-path="geom_dumbbell.html"><a href="geom_dumbbell.html#illustration-47"><i class="fa fa-check"></i><b>49.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="50" data-path="geom_function.html"><a href="geom_function.html"><i class="fa fa-check"></i><b>50</b> geom_function</a>
+<ul>
+<li class="chapter" data-level="50.1" data-path="geom_function.html"><a href="geom_function.html#illustration-48"><i class="fa fa-check"></i><b>50.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="51" data-path="geom_dl.html"><a href="geom_dl.html"><i class="fa fa-check"></i><b>51</b> geom_dl</a>
+<ul>
+<li class="chapter" data-level="51.1" data-path="geom_dl.html"><a href="geom_dl.html#illustration-49"><i class="fa fa-check"></i><b>51.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="52" data-path="geom_encircle.html"><a href="geom_encircle.html"><i class="fa fa-check"></i><b>52</b> geom_encircle</a>
+<ul>
+<li class="chapter" data-level="52.1" data-path="geom_encircle.html"><a href="geom_encircle.html#illustration-50"><i class="fa fa-check"></i><b>52.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="53" data-path="geom_mark_circle.html"><a href="geom_mark_circle.html"><i class="fa fa-check"></i><b>53</b> geom_mark_circle</a>
+<ul>
+<li class="chapter" data-level="53.1" data-path="geom_mark_circle.html"><a href="geom_mark_circle.html#illustration-51"><i class="fa fa-check"></i><b>53.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="54" data-path="geom_delaunay_tile.html"><a href="geom_delaunay_tile.html"><i class="fa fa-check"></i><b>54</b> geom_delaunay_tile</a>
+<ul>
+<li class="chapter" data-level="54.1" data-path="geom_delaunay_tile.html"><a href="geom_delaunay_tile.html#illustration-52"><i class="fa fa-check"></i><b>54.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="55" data-path="geom_label_repel.html"><a href="geom_label_repel.html"><i class="fa fa-check"></i><b>55</b> geom_label_repel</a>
+<ul>
+<li class="chapter" data-level="55.1" data-path="geom_label_repel.html"><a href="geom_label_repel.html#illustration-53"><i class="fa fa-check"></i><b>55.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="56" data-path="geom_map.html"><a href="geom_map.html"><i class="fa fa-check"></i><b>56</b> geom_map</a>
+<ul>
+<li class="chapter" data-level="56.1" data-path="geom_map.html"><a href="geom_map.html#illustration-54"><i class="fa fa-check"></i><b>56.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="57" data-path="geom_sina.html"><a href="geom_sina.html"><i class="fa fa-check"></i><b>57</b> geom_sina</a>
+<ul>
+<li class="chapter" data-level="57.1" data-path="geom_sina.html"><a href="geom_sina.html#illustration-55"><i class="fa fa-check"></i><b>57.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="58" data-path="geom_lm.html"><a href="geom_lm.html"><i class="fa fa-check"></i><b>58</b> geom_lm</a>
+<ul>
+<li class="chapter" data-level="58.1" data-path="geom_lm.html"><a href="geom_lm.html#illustration-56"><i class="fa fa-check"></i><b>58.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="59" data-path="geom_circle.html"><a href="geom_circle.html"><i class="fa fa-check"></i><b>59</b> geom_circle</a>
+<ul>
+<li class="chapter" data-level="59.1" data-path="geom_circle.html"><a href="geom_circle.html#illustration-57"><i class="fa fa-check"></i><b>59.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="60" data-path="geom_errorbarh.html"><a href="geom_errorbarh.html"><i class="fa fa-check"></i><b>60</b> geom_errorbarh</a>
+<ul>
+<li class="chapter" data-level="60.1" data-path="geom_errorbarh.html"><a href="geom_errorbarh.html#illustration-58"><i class="fa fa-check"></i><b>60.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="61" data-path="geom_lm_intercept.html"><a href="geom_lm_intercept.html"><i class="fa fa-check"></i><b>61</b> geom_lm_intercept</a>
+<ul>
+<li class="chapter" data-level="61.1" data-path="geom_lm_intercept.html"><a href="geom_lm_intercept.html#illustration-59"><i class="fa fa-check"></i><b>61.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="62" data-path="geom_voronoi_tile.html"><a href="geom_voronoi_tile.html"><i class="fa fa-check"></i><b>62</b> geom_voronoi_tile</a>
+<ul>
+<li class="chapter" data-level="62.1" data-path="geom_voronoi_tile.html"><a href="geom_voronoi_tile.html#illustration-60"><i class="fa fa-check"></i><b>62.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="63" data-path="geom_x_line.html"><a href="geom_x_line.html"><i class="fa fa-check"></i><b>63</b> geom_x_line</a>
+<ul>
+<li class="chapter" data-level="63.1" data-path="geom_x_line.html"><a href="geom_x_line.html#illustration-61"><i class="fa fa-check"></i><b>63.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="64" data-path="geom_dumbbell-1.html"><a href="geom_dumbbell-1.html"><i class="fa fa-check"></i><b>64</b> geom_dumbbell</a>
+<ul>
+<li class="chapter" data-level="64.1" data-path="geom_dumbbell-1.html"><a href="geom_dumbbell-1.html#illustration-62"><i class="fa fa-check"></i><b>64.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="65" data-path="geom_path.html"><a href="geom_path.html"><i class="fa fa-check"></i><b>65</b> geom_path</a>
+<ul>
+<li class="chapter" data-level="65.1" data-path="geom_path.html"><a href="geom_path.html#illustration-63"><i class="fa fa-check"></i><b>65.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="66" data-path="geom_alluvium.html"><a href="geom_alluvium.html"><i class="fa fa-check"></i><b>66</b> geom_alluvium</a>
+<ul>
+<li class="chapter" data-level="66.1" data-path="geom_alluvium.html"><a href="geom_alluvium.html#illustration-64"><i class="fa fa-check"></i><b>66.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="67" data-path="geom_qq_line.html"><a href="geom_qq_line.html"><i class="fa fa-check"></i><b>67</b> geom_qq_line</a>
+<ul>
+<li class="chapter" data-level="67.1" data-path="geom_qq_line.html"><a href="geom_qq_line.html#illustration-65"><i class="fa fa-check"></i><b>67.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="68" data-path="geom_xy_means.html"><a href="geom_xy_means.html"><i class="fa fa-check"></i><b>68</b> geom_xy_means</a>
+<ul>
+<li class="chapter" data-level="68.1" data-path="geom_xy_means.html"><a href="geom_xy_means.html#illustration-66"><i class="fa fa-check"></i><b>68.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="69" data-path="geom_heat_tri.html"><a href="geom_heat_tri.html"><i class="fa fa-check"></i><b>69</b> geom_heat_tri</a>
+<ul>
+<li class="chapter" data-level="69.1" data-path="geom_heat_tri.html"><a href="geom_heat_tri.html#illustration-67"><i class="fa fa-check"></i><b>69.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="70" data-path="geom_col.html"><a href="geom_col.html"><i class="fa fa-check"></i><b>70</b> geom_col</a>
+<ul>
+<li class="chapter" data-level="70.1" data-path="geom_col.html"><a href="geom_col.html#illustration-68"><i class="fa fa-check"></i><b>70.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="71" data-path="geom_sankey.html"><a href="geom_sankey.html"><i class="fa fa-check"></i><b>71</b> geom_sankey</a>
+<ul>
+<li class="chapter" data-level="71.1" data-path="geom_sankey.html"><a href="geom_sankey.html#illustration-69"><i class="fa fa-check"></i><b>71.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="72" data-path="geom_bar_interactive.html"><a href="geom_bar_interactive.html"><i class="fa fa-check"></i><b>72</b> geom_bar_interactive</a>
+<ul>
+<li class="chapter" data-level="72.1" data-path="geom_bar_interactive.html"><a href="geom_bar_interactive.html#illustration-70"><i class="fa fa-check"></i><b>72.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="73" data-path="geom_line_interactive.html"><a href="geom_line_interactive.html"><i class="fa fa-check"></i><b>73</b> geom_line_interactive</a>
+<ul>
+<li class="chapter" data-level="73.1" data-path="geom_line_interactive.html"><a href="geom_line_interactive.html#illustration-71"><i class="fa fa-check"></i><b>73.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="74" data-path="geom_label-1.html"><a href="geom_label-1.html"><i class="fa fa-check"></i><b>74</b> geom_label</a>
+<ul>
+<li class="chapter" data-level="74.1" data-path="geom_label-1.html"><a href="geom_label-1.html#illustration-72"><i class="fa fa-check"></i><b>74.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="75" data-path="geom_quantile.html"><a href="geom_quantile.html"><i class="fa fa-check"></i><b>75</b> geom_quantile</a>
+<ul>
+<li class="chapter" data-level="75.1" data-path="geom_quantile.html"><a href="geom_quantile.html#illustration-73"><i class="fa fa-check"></i><b>75.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="76" data-path="geom_y_line.html"><a href="geom_y_line.html"><i class="fa fa-check"></i><b>76</b> geom_y_line</a>
+<ul>
+<li class="chapter" data-level="76.1" data-path="geom_y_line.html"><a href="geom_y_line.html#illustration-74"><i class="fa fa-check"></i><b>76.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="77" data-path="geom_heat_circle.html"><a href="geom_heat_circle.html"><i class="fa fa-check"></i><b>77</b> geom_heat_circle</a>
+<ul>
+<li class="chapter" data-level="77.1" data-path="geom_heat_circle.html"><a href="geom_heat_circle.html#illustration-75"><i class="fa fa-check"></i><b>77.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="78" data-path="geom_quasirandom.html"><a href="geom_quasirandom.html"><i class="fa fa-check"></i><b>78</b> geom_quasirandom</a>
+<ul>
+<li class="chapter" data-level="78.1" data-path="geom_quasirandom.html"><a href="geom_quasirandom.html#illustration-76"><i class="fa fa-check"></i><b>78.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="79" data-path="geom_ridgeline.html"><a href="geom_ridgeline.html"><i class="fa fa-check"></i><b>79</b> geom_ridgeline</a>
+<ul>
+<li class="chapter" data-level="79.1" data-path="geom_ridgeline.html"><a href="geom_ridgeline.html#illustration-77"><i class="fa fa-check"></i><b>79.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="80" data-path="geom_contour.html"><a href="geom_contour.html"><i class="fa fa-check"></i><b>80</b> geom_contour</a>
+<ul>
+<li class="chapter" data-level="80.1" data-path="geom_contour.html"><a href="geom_contour.html#illustration-78"><i class="fa fa-check"></i><b>80.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="81" data-path="geom_sf_lable.html"><a href="geom_sf_lable.html"><i class="fa fa-check"></i><b>81</b> geom_sf_lable</a>
+<ul>
+<li class="chapter" data-level="81.1" data-path="geom_sf_lable.html"><a href="geom_sf_lable.html#illustration-79"><i class="fa fa-check"></i><b>81.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="82" data-path="geom_arc-geom_arc_bar.html"><a href="geom_arc-geom_arc_bar.html"><i class="fa fa-check"></i><b>82</b> geom_arc &amp; geom_arc_bar</a>
+<ul>
+<li class="chapter" data-level="82.1" data-path="geom_arc-geom_arc_bar.html"><a href="geom_arc-geom_arc_bar.html#illustration-80"><i class="fa fa-check"></i><b>82.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="83" data-path="geom_area.html"><a href="geom_area.html"><i class="fa fa-check"></i><b>83</b> geom_area</a>
+<ul>
+<li class="chapter" data-level="83.1" data-path="geom_area.html"><a href="geom_area.html#illustration-81"><i class="fa fa-check"></i><b>83.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="84" data-path="geom_abline.html"><a href="geom_abline.html"><i class="fa fa-check"></i><b>84</b> geom_abline</a>
+<ul>
+<li class="chapter" data-level="84.1" data-path="geom_abline.html"><a href="geom_abline.html#illustration-82"><i class="fa fa-check"></i><b>84.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="85" data-path="geom_bump.html"><a href="geom_bump.html"><i class="fa fa-check"></i><b>85</b> geom_bump</a>
+<ul>
+<li class="chapter" data-level="85.1" data-path="geom_bump.html"><a href="geom_bump.html#illustration-83"><i class="fa fa-check"></i><b>85.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="86" data-path="geom_mark_rect.html"><a href="geom_mark_rect.html"><i class="fa fa-check"></i><b>86</b> geom_mark_rect</a>
+<ul>
+<li class="chapter" data-level="86.1" data-path="geom_mark_rect.html"><a href="geom_mark_rect.html#illustration-84"><i class="fa fa-check"></i><b>86.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="87" data-path="geom_mark_hull.html"><a href="geom_mark_hull.html"><i class="fa fa-check"></i><b>87</b> geom_mark_hull</a>
+<ul>
+<li class="chapter" data-level="87.1" data-path="geom_mark_hull.html"><a href="geom_mark_hull.html#illustration-85"><i class="fa fa-check"></i><b>87.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="88" data-path="geom_stream.html"><a href="geom_stream.html"><i class="fa fa-check"></i><b>88</b> geom_stream</a>
+<ul>
+<li class="chapter" data-level="88.1" data-path="geom_stream.html"><a href="geom_stream.html#illustration-86"><i class="fa fa-check"></i><b>88.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="89" data-path="geom_qq.html"><a href="geom_qq.html"><i class="fa fa-check"></i><b>89</b> geom_qq</a>
+<ul>
+<li class="chapter" data-level="89.1" data-path="geom_qq.html"><a href="geom_qq.html#illustration-87"><i class="fa fa-check"></i><b>89.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="90" data-path="geom_lm_conf_int.html"><a href="geom_lm_conf_int.html"><i class="fa fa-check"></i><b>90</b> geom_lm_conf_int</a>
+<ul>
+<li class="chapter" data-level="90.1" data-path="geom_lm_conf_int.html"><a href="geom_lm_conf_int.html#illustration-88"><i class="fa fa-check"></i><b>90.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="91" data-path="geom_sf.html"><a href="geom_sf.html"><i class="fa fa-check"></i><b>91</b> geom_sf</a>
+<ul>
+<li class="chapter" data-level="91.1" data-path="geom_sf.html"><a href="geom_sf.html#illustration-89"><i class="fa fa-check"></i><b>91.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="92" data-path="geom_lm_pred_int_segments.html"><a href="geom_lm_pred_int_segments.html"><i class="fa fa-check"></i><b>92</b> geom_lm_pred_int_segments</a>
+<ul>
+<li class="chapter" data-level="92.1" data-path="geom_lm_pred_int_segments.html"><a href="geom_lm_pred_int_segments.html#illustration-90"><i class="fa fa-check"></i><b>92.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="93" data-path="geom_textdensity.html"><a href="geom_textdensity.html"><i class="fa fa-check"></i><b>93</b> geom_textdensity</a>
+<ul>
+<li class="chapter" data-level="93.1" data-path="geom_textdensity.html"><a href="geom_textdensity.html#illustration-91"><i class="fa fa-check"></i><b>93.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="94" data-path="geom_density_ridges.html"><a href="geom_density_ridges.html"><i class="fa fa-check"></i><b>94</b> geom_density_ridges</a>
+<ul>
+<li class="chapter" data-level="94.1" data-path="geom_density_ridges.html"><a href="geom_density_ridges.html#illustration-92"><i class="fa fa-check"></i><b>94.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="95" data-path="geom_lm_intercept_label.html"><a href="geom_lm_intercept_label.html"><i class="fa fa-check"></i><b>95</b> geom_lm_intercept_label</a>
+<ul>
+<li class="chapter" data-level="95.1" data-path="geom_lm_intercept_label.html"><a href="geom_lm_intercept_label.html#illustration-93"><i class="fa fa-check"></i><b>95.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="96" data-path="geom_contour_filled.html"><a href="geom_contour_filled.html"><i class="fa fa-check"></i><b>96</b> geom_contour_filled</a>
+<ul>
+<li class="chapter" data-level="96.1" data-path="geom_contour_filled.html"><a href="geom_contour_filled.html#illustration-94"><i class="fa fa-check"></i><b>96.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="97" data-path="geom_textline.html"><a href="geom_textline.html"><i class="fa fa-check"></i><b>97</b> geom_textline</a>
+<ul>
+<li class="chapter" data-level="97.1" data-path="geom_textline.html"><a href="geom_textline.html#illustration-95"><i class="fa fa-check"></i><b>97.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="98" data-path="geom_lm_residuals.html"><a href="geom_lm_residuals.html"><i class="fa fa-check"></i><b>98</b> geom_lm_residuals</a>
+<ul>
+<li class="chapter" data-level="98.1" data-path="geom_lm_residuals.html"><a href="geom_lm_residuals.html#illustration-96"><i class="fa fa-check"></i><b>98.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="99" data-path="geom_bin2d.html"><a href="geom_bin2d.html"><i class="fa fa-check"></i><b>99</b> geom_bin2d</a>
+<ul>
+<li class="chapter" data-level="99.1" data-path="geom_bin2d.html"><a href="geom_bin2d.html#illustration-97"><i class="fa fa-check"></i><b>99.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="100" data-path="geom_shape.html"><a href="geom_shape.html"><i class="fa fa-check"></i><b>100</b> geom_shape</a>
+<ul>
+<li class="chapter" data-level="100.1" data-path="geom_shape.html"><a href="geom_shape.html#illustration-98"><i class="fa fa-check"></i><b>100.1</b> Illustration</a></li>
+</ul></li>
+<li class="chapter" data-level="101" data-path="how-to-contribute.html"><a href="how-to-contribute.html"><i class="fa fa-check"></i><b>101</b> How to contribute?</a></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Data Visualization: geom Encyclopedia</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="geom_contour_filled" class="section level1 hasAnchor" number="96">
+<h1><span class="header-section-number">Chapter 96</span> geom_contour_filled<a href="geom_contour_filled.html#geom_contour_filled" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>we can not use ggplot2 to draw true 3D surfaces,but we can use geom_contour_filled() to visualize 3D surfaces in 2D.Data must contain X,Y,Z coordinates to specify a valid surface and each unique combination of x and y can appearat once.</p>
+<div id="illustration-94" class="section level2 hasAnchor" number="96.1">
+<h2><span class="header-section-number">96.1</span> Illustration<a href="geom_contour_filled.html#illustration-94" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<div class="sourceCode" id="cb109"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb109-1"><a href="geom_contour_filled.html#cb109-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(iris, <span class="fu">aes</span>(<span class="at">x=</span>Sepal.Length,<span class="at">y=</span>Sepal.Width,<span class="at">z =</span>Petal.Length ))<span class="sc">+</span></span>
+<span id="cb109-2"><a href="geom_contour_filled.html#cb109-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_contour_filled</span>()</span></code></pre></div>
+<p><img src="bookdownproj_files/figure-html/unnamed-chunk-96-1.png" width="672" /></p>
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="geom_lm_intercept_label.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="geom_textline.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/edit/master/02-tears.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": "https://github.com/YOUR GITHUB USERNAME/YOUR REPO NAME/blob/master/02-tears.Rmd",
+"text": null
+},
+"download": null,
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+</body>
+
+</html>

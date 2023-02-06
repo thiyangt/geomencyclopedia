@@ -1,9 +1,20 @@
 --- 
-title: "YOUR TITLE HERE"
-author: "YOUR NAME HERE"
+title: "Data Visualization: geom  Encyclopedia"
+author: "Thiyanga S. Talagala"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 ---
 
-# Down the rabbit-hole
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, warning = FALSE, message = FALSE)
+library(tidyverse)
+devtools::install_github("EvaMaeRey/ggxmean")
+
+devtools::install_github("davidsjoberg/ggsankey")
+library(ggxmean)
+```
+
+# Introduction
 
